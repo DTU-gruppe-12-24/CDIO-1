@@ -9,9 +9,16 @@ public class RaffleCup {
         dice[1] = new Die();
     }
 
-    public int getSum() {
+    public int getValue(int index) {
+        return dice[index].getFaceValue();
+    }
+
+    public void roll() {
         dice[0].roll();
         dice[1].roll();
+    }
+
+    public int getSum() {
         return dice[0].getFaceValue() + dice[1].getFaceValue();
     }
 
