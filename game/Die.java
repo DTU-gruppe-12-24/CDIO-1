@@ -1,12 +1,19 @@
 package game;
 
+/**
+ * A Classical 6-sided Die.
+ */
 public class Die {
+    /**
+     * Initial face value of the die.
+     */
     private int faceValue = 1;
 
     /**
-     * Constructor of the Die class. We utilize the roll() method to get a random
-     * face value
-     * to reflect the real-world randomization of first starting using a die in a
+     * Constructor of the Die class.
+     * <br>
+     * We use the roll() method to get a random face value to reflect the
+     * real-world randomization of first starting using a die in a
      * game.
      */
     public Die() {
@@ -14,17 +21,14 @@ public class Die {
     }
 
     /**
-     * Rolls the die, updating its private attribute faceValue
-     * to a random number between 1 and 6, utilizing the Math.random() method
-     * which returns a double between 0.0 and 1.0.
+     * Rolls the 6-sided die, updating its face value based on a uniform
+     * distribution.
      */
     public void roll() {
         faceValue = (int) (Math.random() * 6) + 1;
     }
 
     /**
-     * Returns the face value of the die.
-     *
      * @return the face value of the die
      */
     public int getFaceValue() {
